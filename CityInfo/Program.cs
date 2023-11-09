@@ -36,6 +36,7 @@ builder.Services.AddDbContext<CityInfoContext>(
         builder.Configuration["ConnectionStrings:CityInfoConnectionString"]
         )
     );
+builder.Services.AddScoped<ICityInfoRepository, CityInfoRepository>();
 
 #if DEBUG
 builder.Services.AddTransient<IMailService, LocalMailService>();
