@@ -8,7 +8,7 @@ using System.Text.Json;
 
 namespace CityInfo.Controllers
 {
-   // [Authorize]
+    [Authorize]
     [ApiController]
     [ApiVersion("1.0")]
     [ApiVersion("2.0")]
