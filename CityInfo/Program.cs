@@ -1,3 +1,4 @@
+using Asp.Versioning;
 using CityInfo;
 using CityInfo.DbContexts;
 using CityInfo.Services;
@@ -61,6 +62,15 @@ builder.Services.AddAuthorization(options =>
         policy.RequireClaim("city", "London");
     });
 });
+
+builder.Services.AddApiVersioning(config =>
+{
+    config.AssumeDefaultVersionWhenUnspecified = true;
+    config.DefaultApiVersion = new Microsoft.AspNetCore.Mvc.ApiVersion(1, 0);
+    config.ReportApiVersions = true;
+});
+
+
 builder.Services.AddScoped<ICityInfoRepository, CityInfoRepository>();
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
