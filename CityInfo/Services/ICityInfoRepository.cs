@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace CityInfo.Services
 {
-    public interface ICityInfoRepository
+    public interface CityInfoRepository
     {
         Task<IEnumerable<City>> GetCitiesAsync();
         Task<(IEnumerable<City>, PaginationMetaData)> GetCitiesAsync(string? name, string? searchQuery, int pageNumber, int pageSize);

@@ -16,11 +16,11 @@ namespace CityInfo.Controllers
     {
         private readonly ILogger<PointsOfInterestController> _logger;
         private readonly IMailService _mialService;
-        private readonly ICityInfoRepository _cityInfoRepository;
+        private readonly CityInfoRepository _cityInfoRepository;
         private readonly IMapper _mapper;
         public PointsOfInterestController(ILogger<PointsOfInterestController> logger,
             IMailService mailService,
-           ICityInfoRepository cityInfoRepository, IMapper mapper)
+           CityInfoRepository cityInfoRepository, IMapper mapper)
         {
 
             _logger = logger ?? throw new ArgumentNullException(nameof(logger));

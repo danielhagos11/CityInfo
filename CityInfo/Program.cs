@@ -102,7 +102,7 @@ builder.Services.AddApiVersioning(config =>
 });
 
 
-builder.Services.AddScoped<ICityInfoRepository, CityInfoRepository>();
+builder.Services.AddScoped<CityInfoRepository, CityInfoRepository>();
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
 #if DEBUG

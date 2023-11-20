@@ -15,10 +15,10 @@ namespace CityInfo.Controllers
     [Route("api/v{version:apiVersion}/cities")]
     public class CitiesController : ControllerBase
     {
-        private readonly ICityInfoRepository _cityInfoRepository;
+        private readonly CityInfoRepository _cityInfoRepository;
         private readonly IMapper _mapper;
         const int maxCitiesPageSize = 20;
-        public CitiesController(ICityInfoRepository cityInfoRepasitory, IMapper mapper)
+        public CitiesController(CityInfoRepository cityInfoRepasitory, IMapper mapper)
         {
             _cityInfoRepository = cityInfoRepasitory ?? throw new ArgumentNullException(nameof(cityInfoRepasitory));
             _mapper = mapper ?? throw new ArgumentNullException(nameof(mapper));
