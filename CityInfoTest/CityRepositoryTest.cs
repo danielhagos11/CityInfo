@@ -13,7 +13,7 @@ namespace CityInfoTest
         [Fact]
         public void Create_NewCityTest()
         {
-            var pcity = new CityInfoRepository();
+            
            
         }
     }

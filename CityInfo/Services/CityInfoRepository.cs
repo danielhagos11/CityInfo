@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace CityInfo.Services
 {
-    public class CityInfoRepository : CityInfoRepository
+    public class CityInfoRepository : ICityInfoRepository
     {
         private readonly CityInfoContext _context;
 
